@@ -2,7 +2,7 @@ import React from 'react'
 import RAD from './RAD.jpg'
 function Meetings() {
   return (
-    <div className='grid grid-cols-2  ml-8 mx-8'>
+    <div className='grid lg:grid-cols-2  ml-8 mx-8 sm:grid-col-1'>
         <div>
       <h1 className='text-xl'>Meetings & Events</h1>
       <p className='text-sm'>Easily make the perfect business event come to life thanks to our adaptable

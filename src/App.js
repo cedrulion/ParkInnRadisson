@@ -4,10 +4,11 @@ import './App.css';
 
 
 
-import Header from './components/Header'
+import Header from './components/NavigationItem'
 import Cfooter from './components/Cfooter'
 import Cards from './components/Cards';
 import Meetings from './components/Meetings';
+import NavigationItem from './components/NavigationItem';
 
 class App extends Component {
 
@@ -31,8 +32,8 @@ class App extends Component {
             
               
             </Routes> */}
-            <div className='piic'>
-            <Header/>
+            <div className='piic md:h-12'>
+            <NavigationItem/>
             </div>
             
             <Cards/>

@@ -1,11 +1,21 @@
-import React from 'react';
 
+import React, { useState } from 'react';
+import RAD from './RAD.jpg'
 
-function Header() {
+  const NavigationItem = () => {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const handleMouseEnter = () => {
+    setShowMenu(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowMenu(false);
+  };
   return (
-    <header className="shadow text-white bg-gray-500 bg-opacity-75" >
+    <header className=" text-white bg-gray-500 bg-opacity-75 text-sm" >
        
-      <nav className="container mx-auto px-6 py-3 md:flex md:justify-between md:items-center text-sm">
+      <nav className="container  mx-auto px-6 py-3 md:flex md:justify-between md:items-center text-sm">
         
         <div className="flex items-center justify-between ">
         
@@ -50,7 +60,24 @@ function Header() {
         
       <div className="md:flex md:items-center text-sm ">
           <div className="flex flex-col md:flex-row md:mx-1">
-            <a className="my-1  hover:text-blue-600 md:mx-2 md:my-0" href="#">HOTELS</a>
+            <a className="my-1  hover:text-blue-600 md:mx-2 md:my-0" href="#" onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}>HOTELS</a>
+        {showMenu && (
+        <div className="absolute right-0 mt-2 w-64 bg-white rounded-lg shadow-xl z-10">
+          <div className="p-4">
+            <h3 className="text-lg font-medium text-gray-900 mb-2">Menu Item</h3>
+            <ul className="list-disc pl-4 text-black">
+              <li> <div ><img  className="img" src= {RAD}/>
+           <h1 className='text-xl'>Standard Room</h1>
+           <p className='text-sm p-2'>Our Standard Rooms offer ample space and the choice between double and twin beds</p>
+           </div> </li>
+              <li>Sub Item 2</li>
+              <li>Sub Item 3</li>
+            </ul>
+          </div>
+        </div>
+      )}
+        
             <a className="my-1  hover:text-blue-600 md:mx-2 md:my-0" href="#">DESTINATIONNS</a>
             <a className="my-1  hover:text-blue-600 md:mx-4 md:my-0" href="#">RADISSON REWARDS</a>
             <a className="my-1 hover:text-blue-600 md:mx-4 md:my-0" href="#">DEALS</a>
@@ -61,11 +88,10 @@ function Header() {
           </div>
          
           </div>
-         
-          
-         
+
     </header>
   );
-}
+  }
 
-export default Header;
+
+export default NavigationItem;

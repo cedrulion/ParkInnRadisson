@@ -3,26 +3,27 @@ import "tailwindcss/tailwind.css";
 import OwlCarousel from 'react-owl-carousel';  
 import 'owl.carousel/dist/assets/owl.carousel.css';  
 import 'owl.carousel/dist/assets/owl.theme.default.css';  
-
+import './Header.css' 
 import RAD from './RAD.jpg'
-import { useState } from 'react';
+
 
 function Cards() {
  
   return (
-    <div className='mx-8 text-sm p-6'>
-       <div className="md:flex md:items-center md:mx-1 bg-white">
+    <div className='mx-8 text-sm p-6 '>
+       <div className="md:flex md:items-center md:mx-1 bg-white ">
           <div className="flex flex-col pl-10 md:flex-row md:mx-1">
-            <a className="my-1 text-black hover:text-blue-600 md:mx-4 md:my-0" href="#"> Overview</a>
-            <a className="my-1 text-black hover:text-blue-600 md:mx-4 md:my-0" href="#"> Rooms</a>
-            <a className="my-1 text-black hover:text-blue-600 md:mx-4 md:my-0" href="#">Deals</a>
-            <a className="my-1 text-black hover:text-blue-600 md:mx-4 md:my-0" href="#">Meetings & Events</a>
-            <a className="my-1 text-black hover:text-blue-600 md:mx-4 md:my-0" href="#">Restaurants & Bars</a>
-            <a className="my-1 text-black hover:text-blue-600 md:mx-4 md:my-0" href="#">Nearby Attractions</a>
-            <a className="my-1 text-black hover:text-blue-600 md:mx-4 md:my-0" href="#">Spa</a>
-            <a className="my-1 text-black hover:text-blue-600 md:mx-4 md:my-0" href="#">Contact</a>
-            <a className="my-1 text-black hover:text-blue-600 md:mx-4 md:my-0" href="#">Review</a>
+           <button className=' '> <a className="my-1 text-black hover:underline md:mx-4 md:my-0" href="#"> Overview</a></button>
+           <button><a className="my-1 text-black hover:text-blue-600 md:mx-4 md:my-0" href="#"> Rooms</a></button>
+           <button><a className="my-1 text-black hover:text-blue-600 md:mx-4 md:my-0" href="#">Deals</a></button>
+           <button> <a className="my-1 text-black hover:text-blue-600 md:mx-4 md:my-0" href="#">Meetings & Events</a></button>
+           <button> <a className="my-1 text-black hover:text-blue-600 md:mx-4 md:my-0" href="#">Restaurants & Bars</a></button>
+           <button> <a className="my-1 text-black hover:text-blue-600 md:mx-4 md:my-0" href="#">Nearby Attractions</a></button>
+           <button> <a className="my-1 text-black hover:text-blue-600 md:mx-4 md:my-0" href="#">Spa</a></button>
+           <button> <a className="my-1 text-black hover:text-blue-600 md:mx-4 md:my-0" href="#">Contact</a></button>
+           <button> <a className="my-1 text-black hover:text-blue-600 md:mx-4 md:my-0" href="#">Review</a></button>
           </div>
+    
           </div>
       <h1 className='p-4 text-xl'>A contemporary hotel in the Rwandan capital</h1>
       <p className='p-4 '>
@@ -31,22 +32,17 @@ function Cards() {
       <button className='text-red-400 p-4'>Read more</button>
    <div className='p-4 '>
       <h1 className='text-xl'>Modern and cozy rooms in Kigali</h1>
-      <p>Park Inn by Radisson Kigali features 161 rooms for business or leisure travelers, complete with free Wi-Fi and in-room coffee and tea facilities.</p>
+      <p>Park Inn by Radisson Kigali features 161 rooms for business or leisure travelers, complete with free Wi-Fi and in-room </p>
+      <p>coffee and tea facilities.</p>
       
-        <div class='container-fluid' >      
-           <div className="row title" style={{marginBottom: "20px"}} >      
-           <div class="col-sm-12 btn btn-info">      
-           Owl Carousel In React Application   
-           </div>      
-           </div>  
-       </div>  
-       <div class='container-fluid ' >            
+        </div>
+       <div class='container-fluid' >            
         <OwlCarousel items={3}  
           className="owl-theme"  
           loop  
           nav  
           margin={8} >  
-           <div ><img  className="img" src= {RAD}/>
+           <div className='w-15 h-10'><img  className="img w-full h-auto" src= {RAD}/>
            <h1 className='text-xl'>Standard Room</h1>
            <p className='text-sm p-2'>Our Standard Rooms offer ample space and the choice between double and twin beds</p>
            </div>  
@@ -74,12 +70,16 @@ function Cards() {
          
          
       </OwlCarousel>  
-      <button className='bg-red-700 ml-12 text-white rounded-md w-20 h-20 justify-center'>BOOK NOW</button>
+   
       </div>  
-  
+      <div class="flex justify-center">
+  <button class="bg-red-700 hover:bg-red-900 text-white font-bold py-2 px-4 rounded">
+    Book Now
+  </button>
+</div>
     </div>
       
-        </div>
+        
  
   );
 }
